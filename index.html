@@ -19,36 +19,60 @@
   </div>
 </div>
 <div id="website" class="d-none">
-  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
-    <div class="container-fluid px-4">
+  <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+  <div class="container-fluid px-3">
 
-      <a class="navbar-brand fw-bold" href="#">
-        <img src="orglogo.webp" height="28" alt="Logo">
-      </a>
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="orglogo.webp" alt="Stackly Logo">
+    </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- Toggle -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNav"
+      aria-controls="mainNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center text-center mobile-nav">
 
-      <div class="collapse navbar-collapse justify-content-center" id="mainNav">
-        <ul class="navbar-nav gap-lg-3 text-center">
-          <li class="nav-item"><a class="nav-link" href="error.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="error.html">Products & Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="error.html">Solutions</a></li>
-          <li class="nav-item"><a class="nav-link" href="error.html">Support</a></li>
-          <li class="nav-item"><a class="nav-link" href="error.html">Learn</a></li>
-          <li class="nav-item"><a class="nav-link" href="error.html">Why Stackly</a></li>
-        </ul>
-      </div>
+        <li class="nav-item">
+          <a class="nav-link " href="error.html">Home</a>
+        </li>
 
-      <div class="d-none d-lg-flex">
-        <button class="btn btn-outline-light rounded-pill px-3">
-          Trials & demos
-        </button>
-      </div>
+        <li class="nav-item">
+          <a class="nav-link" href="error.html">Products & Services</a>
+        </li>
 
+        <li class="nav-item">
+          <a class="nav-link" href="error.html">Solutions</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="error.html">Support</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="error.html">Learn</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="error.html">Why Stackly</a>
+        </li>
+
+      </ul>
     </div>
-  </nav>
+
+  </div>
+</nav>
+
+
   <section class="hero-section">
   <div id="heroCarousel"
        class="carousel slide carousel-fade"
@@ -666,3 +690,4 @@
 <script src="script.js" defer></script>
 </body>
 </html>
+
