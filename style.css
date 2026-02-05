@@ -78,35 +78,95 @@ html, body {
 }
 
 .custom-navbar {
-  background: #0a2540;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0.95),
+    rgba(11, 18, 32, 0.95)
+  );
+  backdrop-filter: blur(6px);
   min-height: 64px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1050;
+}
+.navbar-brand img {
+  width: 140px;
+  max-width: 100%;
+}
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+@media (min-width: 992px) {
+  .custom-navbar .nav-link {
+    color: #e5e7eb;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 14px;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  .custom-navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #38bdf8, #22c55e);
+    transition: all 0.3s ease;
+  }
+
+  .custom-navbar .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+  }
+
+  .custom-navbar .nav-link:hover {
+    color: #38bdf8;
+  }
+  .custom-navbar .nav-link.active {
+    color: #38bdf8 ;
+    font-weight: 600;
+  }
+}
+@media (max-width: 991px) {
+  .mobile-nav {
+    background: linear-gradient(180deg, #020617, #0b1220);
+    margin-top: 12px;
+    padding: 14px 12px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  }
+
+  .mobile-nav .nav-item {
+    margin-bottom: 6px;
+  }
+
+  .mobile-nav .nav-link {
+    color: #e5e7eb;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  .mobile-nav .nav-link.active {
+    background: linear-gradient(135deg, #38bdf8, #22c55e);
+    color: #020617 ;
+    font-weight: 600;
+  }
+  .mobile-nav .nav-link:hover {
+    background: rgba(255,255,255,0.08);
+    color: #38bdf8;
+  }
 }
 
 
-.nav-link {
-  color: #fff !important;
-  position: relative;
-}
-
-.nav-link::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: #4da3ff;
-  transition: 0.3s;
-}
-
-.nav-link:hover::after {
-  width: 100%;
-  left: 0;
-}
 .carousel,
 .carousel-inner,
 .carousel-item {
@@ -990,5 +1050,6 @@ html, body {
     text-align: center;
   }
 }
+
 
 
